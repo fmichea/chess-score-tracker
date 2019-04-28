@@ -18,22 +18,11 @@ class ScoreHistoryInner extends PureComponent {
         }
 
         if (items.length === 0) {
-            items.push()
+            items.push(<p>No history item currently available.</p>)
         }
 
         return <div id="score_history">
             <h3>History</h3>
-
-            <Table>
-                <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Time</th>
-                    <th>Result</th>
-                    <th>Cancel</th>
-                </tr>
-                </thead>
-            </Table>
 
             <div id="score_history_wrapper">
                 <Table>
