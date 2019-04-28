@@ -2,6 +2,7 @@
   "name": "score",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://98810f8c06.net/chess_score",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "immutability-helper": "^3.0.0",
