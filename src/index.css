@@ -9,8 +9,8 @@
   height: 100%;
 }
 
-#root .container .row {
-  height: 100%;
+#root .container .row:first-of-type {
+  height: 95%;
 }
 
 #score {
@@ -48,4 +48,13 @@
 #clear_spacer {
   width: 40px;
   display: inline-block;
+}
+
+.footer {
+  text-align: center;
+  font-size: 0.75em;
+}
+
+.discreet-link {
+  color: #1b1e21;
 }
