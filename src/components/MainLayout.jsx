@@ -3,6 +3,7 @@ import {Col, Container, Jumbotron, Row} from "reactstrap";
 import {ScoreDisplay} from "./ScoreDisplay";
 import {ScoreChangeButtonBar} from "./ScoreChangeButtonBar";
 import {ScoreHistory} from "./ScoreHistory";
+import {ScoreColorPickers} from "./ScoreColorPickers";
 
 export class MainLayout extends PureComponent {
     render() {
@@ -13,6 +14,8 @@ export class MainLayout extends PureComponent {
                         <div id="score_display" className="lead"><ScoreDisplay/></div>
 
                         <div className="lead"><ScoreChangeButtonBar /></div>
+
+                        <div className="lead"><ScoreColorPickers /></div>
                     </Jumbotron>
                 </Col>
 
