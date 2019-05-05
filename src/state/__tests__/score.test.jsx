@@ -26,7 +26,7 @@ describe("state.score", () => {
         expect(getScoreHistoryItemsCount(state)).toEqual(0);
     });
 
-    RESULTS.map((item) => {
+    RESULTS.forEach((item) => {
         const testName = sprintf(
             "adding %s changes total games and player score correctly",
             item.result,
@@ -83,7 +83,7 @@ describe("state.score", () => {
         expect(getScoreHistoryItemsCount(state)).toEqual(0);
     });
 
-    RESULTS.map((item) => {
+    RESULTS.forEach((item) => {
         const testName = sprintf("%s result can be cancelled correctly", item.result);
 
         test(testName, () => {
