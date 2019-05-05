@@ -2,7 +2,7 @@
   "name": "score",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://98810f8c06.net/chess_score",
+  "homepage": "https://fmichea.github.io/chess_score",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "font-awesome": "^4.7.0",
