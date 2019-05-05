@@ -61,7 +61,7 @@
 }
 
 .color-pickers {
-  padding: 1em 0em;
+  padding: 1em 0;
 }
 
 .color-picker-button {
@@ -80,10 +80,10 @@
 
 .color-picker-cover {
   position: fixed;
-  top: 0px;
-  bottom: 0px;
-  right: 0px;
-  left: 0px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
 
 .cancel-button {
