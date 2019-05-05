@@ -1,5 +1,4 @@
 import update from "immutability-helper";
-import {isNotNullOrUndefined} from "../../lib/isNullOrUndefined";
 import {Provider} from "react-redux";
 import React, {PureComponent} from "react";
 import {createAppStore} from "../../state/store";
