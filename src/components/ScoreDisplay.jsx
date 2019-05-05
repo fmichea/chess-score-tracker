@@ -2,7 +2,6 @@ import React, {PureComponent} from "react";
 import {connect} from "react-redux";
 import {getPlayerScore, getTotalGames} from "../state/readers/score";
 import * as PropTypes from "prop-types";
-import {ColorPicker} from "./ColorPicker";
 import {getColorByColorID} from "../state/readers/colors";
 import {
     SCORE_BACKGROUND_COLOR_ID,
