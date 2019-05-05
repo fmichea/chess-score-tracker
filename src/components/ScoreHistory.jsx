@@ -14,11 +14,13 @@ class ScoreHistoryInner extends PureComponent {
         const items = [];
 
         for (let idx = 0; idx < this.props.historyItemsCount; idx++) {
-            items.push(<ScoreHistoryItem idx={idx} />);
+            items.push(<ScoreHistoryItem key={idx} idx={idx} />);
         }
 
         if (items.length === 0) {
-            items.push(<p>No history item currently available.</p>)
+            items.push(<tr key="default">
+                <td>No history item currently available.</td>
+            </tr>);
         }
 
         return <div id="score_history">
