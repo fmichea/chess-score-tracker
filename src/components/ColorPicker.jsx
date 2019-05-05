@@ -4,11 +4,13 @@ import {SketchPicker} from "react-color";
 import {connect} from "react-redux";
 import {getColorByColorID} from "../state/readers/colors";
 import {changeColor} from "../state/actions/colors";
+import {isNullOrUndefined} from "../lib/isNullOrUndefined";
+import {showError} from "../lib/showError";
 
 class ColorPickerInner extends PureComponent {
     static propTypes = {
         colorID: PropTypes.string.isRequired,
-        color: PropTypes.string.isRequired,
+        color: PropTypes.string,
     };
 
     constructor(props) {
@@ -32,6 +34,11 @@ class ColorPickerInner extends PureComponent {
     };
 
     render() {
+        if (isNullOrUndefined(this.props.color)) {
+            showError("ColorPicker created with invalid color id %s", this.props.colorID);
+            return null;
+        }
+
         const buttonStyle = {backgroundColor: this.props.color};
 
         let popover = null;
