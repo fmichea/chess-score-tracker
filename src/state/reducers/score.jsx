@@ -2,6 +2,7 @@ import {ADD_RESULT, CLEAR_RESULTS, DRAW, LOSS, REMOVE_RESULT, WIN} from "../cons
 import update from "immutability-helper";
 import moment from "moment";
 import uuid4 from "uuid/v4";
+import {showError} from "../../lib/showError";
 
 const defaultState = {
     playerScore: 0,
@@ -19,6 +20,7 @@ const convertResultTypeToScore = (resultType) => {
             return 0;
 
         default:
+            showError("received unknown result type %s, scoring as loss", resultType);
             return 0;
     }
 };
@@ -53,7 +55,9 @@ export const scoreReducer = (state = defaultState, action) => {
             const historyItemsWithID = state.history.filter(item => {
                 return item.id === action.id
             });
+
             if (historyItemsWithID.length !== 1) {
+                showError("received cancellation for unknown id %s", action.id);
                 return state;
             }
 
