@@ -22,7 +22,7 @@ class ScoreHistoryItemInner extends PureComponent {
 
         let cancel = null;
         if (item.cancelable) {
-            cancel = <a onClick={this.removeItem()}>[cancel]</a>
+            cancel = <span className="cancel-button" onClick={this.removeItem()}>[cancel]</span>
         }
 
         let isCancellation = null;
